@@ -1042,7 +1042,7 @@ start_dns() {
 			china_ng_local_dns=${LOCAL_DNS}
 			sing_box_local_dns="direct_dns_udp_server=${LOCAL_DNS}"
 		;;
-		tcp)
+		tcp)	
 			local DIRECT_DNS=$(normalize_dns "$(config_n_get @global[0] direct_dns 223.5.5.5:53)")
 			china_ng_local_dns="tcp://${DIRECT_DNS}"
 			sing_box_local_dns="direct_dns_tcp_server=${DIRECT_DNS}"
